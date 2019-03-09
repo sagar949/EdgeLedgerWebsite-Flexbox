@@ -13,6 +13,17 @@ function initMap() {
   const marker = new google.maps.Marker({ position: loc, map: map });
 }
 
+// Sticky menu background
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('#navbar');
+  if (window.scrollY > 150) {
+    navbar.style.opacity = 0.9;
+  } else {
+    navbar.style.opacity = 1;
+  }
+});
+
 // Smooth Scrolloing
 
 $('#navbar a, .btn').on('click', function(event) {
